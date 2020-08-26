@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Energy_bar.qml</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Page1.qml</file>
+        <file>Page1Form.ui.qml</file>
+        <file>Fuel.qml</file>
+        <file>FuelNeedle.qml</file>
+        <file>Gear.qml</file>
+        <file>Speed.qml</file>
+        <file>SpeedNeedle.qml</file>
+        <file>Page2.qml</file>
+        <file>Page2Form.ui.qml</file>
+    </qresource>
+</RCC>

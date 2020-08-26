@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>customer.qml</file>
+        <file>PageBackground.qml</file>
+        <file>PageBackgroundForm.ui.qml</file>
+    </qresource>
+</RCC>

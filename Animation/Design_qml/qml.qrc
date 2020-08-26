@@ -1,0 +1,35 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Button_make.qml</file>
+        <file>button_down.png</file>
+        <file>button_up.png</file>
+        <file>ButtonSlider.qml</file>
+        <file>Slider_make.qml</file>
+        <file>bubble.png</file>
+        <file>ccslider_bg.png</file>
+        <file>cmeter_bg.png</file>
+        <file>cmeter_display.png</file>
+        <file>cmeter_popeffects.png</file>
+        <file>comboNeedle.png</file>
+        <file>logo.png</file>
+        <file>slidingNeedle.png</file>
+        <file>vmeter_bg.png</file>
+        <file>vmeter_fg.png</file>
+        <file>vmeter_popeffects.png</file>
+        <file>vslider_bg.png</file>
+        <file>vslider_fg.png</file>
+        <file>vslider_handle.png</file>
+        <file>water_bar.png</file>
+        <file>VerticalMeter_make.qml</file>
+        <file>CircularCellSlider_make.qml</file>
+        <file>CircularCellSliderCell.qml</file>
+        <file>ccslider_btnDown_off.png</file>
+        <file>ccslider_btnDown_on.png</file>
+        <file>ccslider_btnUp_off.png</file>
+        <file>ccslider_btnUp_on.png</file>
+        <file>ccslider_led_off.png</file>
+        <file>ccslider_led_on.png</file>
+        <file>CircularMeter_make.qml</file>
+    </qresource>
+</RCC>

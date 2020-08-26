@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>../image/boat.png</file>
+        <file>../image/cover.png</file>
+        <file>../image/day.png</file>
+        <file>../image/moon.png</file>
+        <file>../image/mountain.png</file>
+        <file>../image/night.png</file>
+        <file>../image/wing.png</file>
+        <file>Cloud.qml</file>
+        <file>Bird.qml</file>
+        <file>Star.qml</file>
+    </qresource>
+</RCC>
