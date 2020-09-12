@@ -234,6 +234,7 @@ Makefile: ..\untitled\untitled.pro ..\..\..\..\Qt\5.15.0\msvc2019_64\mkspecs\win
 		..\..\..\..\Qt\5.15.0\msvc2019_64\mkspecs\features\qt_config.prf \
 		..\..\..\..\Qt\5.15.0\msvc2019_64\mkspecs\win32-msvc\qmake.conf \
 		..\..\..\..\Qt\5.15.0\msvc2019_64\mkspecs\features\spec_post.prf \
+		.qmake.stash \
 		..\..\..\..\Qt\5.15.0\msvc2019_64\mkspecs\features\exclusive_builds.prf \
 		..\..\..\..\Qt\5.15.0\msvc2019_64\mkspecs\common\msvc-version.conf \
 		..\..\..\..\Qt\5.15.0\msvc2019_64\mkspecs\features\toolchain.prf \
@@ -253,7 +254,6 @@ Makefile: ..\untitled\untitled.pro ..\..\..\..\Qt\5.15.0\msvc2019_64\mkspecs\win
 		..\..\..\..\Qt\5.15.0\msvc2019_64\mkspecs\features\yacc.prf \
 		..\..\..\..\Qt\5.15.0\msvc2019_64\mkspecs\features\lex.prf \
 		..\untitled\untitled.pro \
-		.qmake.stash \
 		..\..\..\..\Qt\5.15.0\msvc2019_64\mkspecs\features\build_pass.prf
 	$(QMAKE) -o Makefile ..\untitled\untitled.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug"
 ..\..\..\..\Qt\5.15.0\msvc2019_64\mkspecs\features\spec_pre.prf:
@@ -406,6 +406,7 @@ Makefile: ..\untitled\untitled.pro ..\..\..\..\Qt\5.15.0\msvc2019_64\mkspecs\win
 ..\..\..\..\Qt\5.15.0\msvc2019_64\mkspecs\features\qt_config.prf:
 ..\..\..\..\Qt\5.15.0\msvc2019_64\mkspecs\win32-msvc\qmake.conf:
 ..\..\..\..\Qt\5.15.0\msvc2019_64\mkspecs\features\spec_post.prf:
+.qmake.stash:
 ..\..\..\..\Qt\5.15.0\msvc2019_64\mkspecs\features\exclusive_builds.prf:
 ..\..\..\..\Qt\5.15.0\msvc2019_64\mkspecs\common\msvc-version.conf:
 ..\..\..\..\Qt\5.15.0\msvc2019_64\mkspecs\features\toolchain.prf:
@@ -425,7 +426,6 @@ Makefile: ..\untitled\untitled.pro ..\..\..\..\Qt\5.15.0\msvc2019_64\mkspecs\win
 ..\..\..\..\Qt\5.15.0\msvc2019_64\mkspecs\features\yacc.prf:
 ..\..\..\..\Qt\5.15.0\msvc2019_64\mkspecs\features\lex.prf:
 ..\untitled\untitled.pro:
-.qmake.stash:
 ..\..\..\..\Qt\5.15.0\msvc2019_64\mkspecs\features\build_pass.prf:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\untitled\untitled.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug"

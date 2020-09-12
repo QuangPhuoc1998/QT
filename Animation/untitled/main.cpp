@@ -1,15 +1,20 @@
 #include <stdio.h>
-void print()
+#include <stdint.h>
+#include <iostream>
+#include "my_class.h"
+
+using namespace std;
+My_class obj;
+struct My_struct
 {
-#ifdef _D
-  printf("Debug");
-#elsse
-   printf("Release");
-#endif
-}
-#define _D
+    uint32_t c;
+    uint16_t b;
+    uint8_t a;
+};
+
 int main()
 {
-    print();
+    cout << sizeof (My_struct) << "\n";
+    obj.set();
     return 0;
 }
