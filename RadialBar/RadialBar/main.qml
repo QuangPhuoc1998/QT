@@ -44,7 +44,7 @@ Window {
         value: 0
         onValueChanged:
         {
-            //rb.value = value
+            rb.value = value
         }
     }
 }
