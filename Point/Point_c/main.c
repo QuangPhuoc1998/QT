@@ -1,16 +1,13 @@
-#include <stdio.h>
+#include <string.h>
+#include <stdio.h> /* for printf */
 
-int main()
-{
-    char text[50] = "ABCD";
-    char *p = "hihi";
-    int number[3][2][2][2];
-    number[0][0][0][0] = 2;
-    int i;
-    printf("%d\n", number[0][0][0][0]);
-    for(i=0;p[i]!='\0';i++)
-    {
-        printf("%c\n", p[i]);
-    }
-    return 0;
+void tst_strtok (void) {
+  char *tok;
+
+  tok = strtok ("This is a string of text", " \t\n");
+
+  while (tok != NULL) {
+    printf ("Token: %s\n", tok);
+    tok = strtok (NULL, " \t\n");
+  }
 }

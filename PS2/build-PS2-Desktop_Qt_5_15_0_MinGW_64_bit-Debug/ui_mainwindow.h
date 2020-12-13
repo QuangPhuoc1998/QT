@@ -31,7 +31,7 @@ public:
     QPushButton *btn_up;
     QPushButton *btn_down;
     QPushButton *btn_up_2;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QVBoxLayout *verticalLayout;
     QPushButton *btn_1;
     QPushButton *btn_2;
@@ -68,18 +68,18 @@ public:
         btn_up_2 = new QPushButton(centralwidget);
         btn_up_2->setObjectName(QString::fromUtf8("btn_up_2"));
         btn_up_2->setGeometry(QRect(320, 60, 101, 41));
-        widget = new QWidget(centralwidget);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(50, 60, 95, 65));
-        verticalLayout = new QVBoxLayout(widget);
+        layoutWidget = new QWidget(centralwidget);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(50, 60, 95, 65));
+        verticalLayout = new QVBoxLayout(layoutWidget);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
-        btn_1 = new QPushButton(widget);
+        btn_1 = new QPushButton(layoutWidget);
         btn_1->setObjectName(QString::fromUtf8("btn_1"));
 
         verticalLayout->addWidget(btn_1);
 
-        btn_2 = new QPushButton(widget);
+        btn_2 = new QPushButton(layoutWidget);
         btn_2->setObjectName(QString::fromUtf8("btn_2"));
 
         verticalLayout->addWidget(btn_2);
