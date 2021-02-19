@@ -13,7 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
     serialPort = new QSerialPort(this);
 
     serialPort = new QSerialPort();
-    serialPort->setPortName("COM3");
+    serialPort->setPortName("COM10");
     serialPort->setBaudRate(QSerialPort::Baud9600);
     serialPort->setDataBits(QSerialPort::Data8);
     serialPort->setParity(QSerialPort::NoParity);
