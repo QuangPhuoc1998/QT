@@ -65,10 +65,64 @@ void MainWindow::on_btn_send1_clicked()
 
 void MainWindow::serialport_read1()
 {
+    /*
     ui->txt_receiver1->moveCursor(QTextCursor::End);
     QString data = serialPort1->readAll();
     ui->txt_receiver1->insertPlainText(data);
     serialPort2->write(data.toStdString().data());
+    */
+    static uint8_t index = 0;
+    uint8_t check_lenth = 0;
+
+    QByteArray data = serialPort1->readAll();
+
+    for(uint8_t i = 0 ; i < data.length(); i++)
+    {
+        if(index <= FRAME_ID)
+            {
+                g_aubDataSerial[index] = data[i];
+                if(index == STX_INDEX)
+                {
+                    if(g_aubDataSerial[STX_INDEX] != STX_DATA)
+                    {
+                        index = 0;
+                    }
+                    else
+                    {
+                        index++;
+                    }
+                }
+                else
+                {
+                    index++;
+                }
+            }
+            else if(index < 20/*g_aubDataSerial[LENTH_INDEX]*/+2)
+            {
+                g_aubDataSerial[index] = data[i];
+                check_lenth = 20/*g_aubDataSerial[LENTH_INDEX]*/+2-1;
+
+                if(index == check_lenth)
+                {
+                    if(g_aubDataSerial[check_lenth] == ETX_DATA)
+                    {
+                        /*--- Correct DATA ---*/
+                        qDebug() << "Correct";
+                    }
+
+                    index = 0;
+                }
+                else
+                {
+                    index++;
+                }
+            }
+            else
+            {
+                index = 0;
+            }
+        qDebug() << data[i];
+    }
 }
 
 void MainWindow::serialport_read2()
@@ -93,7 +147,7 @@ void MainWindow::Serial_config()
 {
     serialPort1 = new QSerialPort();
     serialPort1->setPortName(ui->cb_name1->currentText());
-    serialPort1->setBaudRate(QSerialPort::Baud57600);
+    serialPort1->setBaudRate(QSerialPort::Baud9600);
     serialPort1->setDataBits(QSerialPort::Data8);
     serialPort1->setParity(QSerialPort::NoParity);
     serialPort1->setStopBits(QSerialPort::OneStop);

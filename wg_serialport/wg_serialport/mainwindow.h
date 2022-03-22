@@ -3,6 +3,13 @@
 
 #include <QMainWindow>
 
+#define STX_DATA        0x31
+#define ETX_DATA        0x32
+#define STX_INDEX       0
+#define LENTH_INDEX     1
+#define FRAME_ID        2
+#define MAX_DATA_LENTH  64
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -14,6 +21,7 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    uint8_t g_aubDataSerial[MAX_DATA_LENTH] = {0};
 
 private slots:
     void on_btn_connect_clicked();
